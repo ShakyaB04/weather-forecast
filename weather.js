@@ -32,7 +32,7 @@ let geocoding = (search) =>{
         minmax.innerHTML = ''
     }
     else{
-        const geourl = `http://api.openweathermap.org/geo/1.0/direct?q=${search}&appid=${apikey}`
+        const geourl = `https://api.openweathermap.org/geo/1.0/direct?q=${search}&appid=${apikey}`
         axios.get(geourl)
         .then(res => {
             getWeather(res.data[0].lat, res.data[0].lon, search)
